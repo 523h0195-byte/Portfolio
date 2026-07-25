@@ -1,0 +1,36 @@
+[
+    {
+        "title": "DX Community",
+        "desc": "Một nền tảng cộng đồng dành cho các nhà phát triển và người đam mê công nghệ.",
+        "link": "https://dxcommunity.netlify.app",
+        "tags": [
+            "React",
+            "Netlify",
+            "Community"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    },
+    {
+        "title": "GDPQ An Ninh",
+        "desc": "Một dự án AI Studio về giáo dục quốc phòng và an ninh.",
+        "link": "https://gdpq-an-ninh-benunu.ai.studio",
+        "tags": [
+            "AI",
+            "Studio",
+            "Education"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    },
+    {
+        "title": "Dự án khác không có link",
+        "desc": "Mô tả cho dự án này. Vì không có thuộc tính 'link', nút sandbox sẽ không hiển thị.",
+        "tags": [
+            "Tag1",
+            "Tag2"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    }
+]

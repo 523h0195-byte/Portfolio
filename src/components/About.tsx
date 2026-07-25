@@ -4,35 +4,35 @@ import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
 
 const About = () => (
-  <Section id="about" className="bg-sand-100">
+  <Section id="about" className="bg-[#FFFEF0]">
     <SectionTitle subtitle="Get to know me better">About Me</SectionTitle>
     <div className="grid md:grid-cols-2 gap-16 items-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="space-y-6 text-lg text-taupe-200 leading-relaxed"
+        className="space-y-8 text-lg text-[#0A0A0A] leading-loose"
       >
         <p>
           I am a second-year Computer Science student at the{' '}
-          <span className="text-espresso-100 font-medium">University of Science</span>,
-          specializing in <span className="text-coffee-300 font-medium">Artificial Intelligence</span>.
+          <span className="text-[#654321] font-medium">Ton Duc Thang University</span>,
+          specializing in <span className="text-[#654321] font-medium">Artificial Intelligence</span>.
         </p>
         <p>
           My journey began with a curiosity about how machines learn. Today, I&apos;m building
           neural networks and exploring the frontiers of Computer Vision and NLP.
         </p>
-        <div className="flex flex-wrap gap-4 mt-8">
+        <div className="flex flex-wrap gap-4">
           {[
             { label: 'Major', value: 'Computer Science (AI)' },
             { label: 'Focus', value: 'Deep Learning & MLOps' },
             { label: 'Location', value: 'Ho Chi Minh City' },
-          ].map((item, idx) => (
-            <div key={idx} className="px-5 py-3 bg-white rounded-xl border border-sand-100">
-              <div className="text-xs text-taupe-200 uppercase tracking-wider mb-1">
+          ].map((item) => (
+            <div key={item.label} className="px-5 py-3 bg-white rounded-xl border border-gray-200 shadow-sm">
+              <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">
                 {item.label}
               </div>
-              <div className="text-espresso-100 font-medium">{item.value}</div>
+              <div className="text-[#0A0A0A] font-medium">{item.value}</div>
             </div>
           ))}
         </div>

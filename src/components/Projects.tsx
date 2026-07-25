@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
 import ProjectCard from './ProjectCard';
-import type { Project } from '../data/projects';
+import projects from '../data/projects.json';
 
 const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    fetch('/projects.json')
-      .then((res) => res.ok ? res.json() : [])
-      .then(setProjects)
-      .catch(() => {});
-  }, []);
-
   return (
     <Section id="projects" style={{ backgroundImage: "url('/homepage2.png')" }}>
       <SectionTitle subtitle="Some things I've built">Featured Projects</SectionTitle>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.length > 0 ? (
-          projects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} />
+          projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
           ))
         ) : (
           <div className="col-span-2 grid md:grid-cols-2 gap-8">
