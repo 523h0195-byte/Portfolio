@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './theme.css';
+
+@layer base {
+  * {
+    border-color: var(--border-sand);
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  ::selection {
+    background-color: var(--accent-gold);
+    color: var(--bg-cream);
+  }
+}
+
+@layer components {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
