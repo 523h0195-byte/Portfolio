@@ -2,25 +2,28 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
+import AboutImg from '../assets/about_image1.jpg';
 
 const About = () => (
-  <Section id="about" className="bg-[#FFFEF0]">
+  <Section id="about">
     <SectionTitle subtitle="Get to know me better">About Me</SectionTitle>
     <div className="grid md:grid-cols-2 gap-16 items-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="space-y-8 text-lg text-[#0A0A0A] leading-loose"
+        className="space-y-10 text-lg text-[#0A0A0A] leading-loose"
       >
         <p>
-          I am a second-year Computer Science student at the{' '}
-          <span className="text-[#654321] font-medium">Ton Duc Thang University</span>,
-          specializing in <span className="text-[#654321] font-medium">Artificial Intelligence</span>.
+          I am a senior Computer Science student at the{' '}
+          <span className="font-medium text-[#654321]">Ton Duc Thang University</span>,
+          specializing in <span className="font-medium text-[#654321]">Artificial Intelligence</span>.
         </p>
         <p>
-          My journey began with a curiosity about how machines learn. Today, I&apos;m building
-          neural networks and exploring the frontiers of Computer Vision and NLP.
+          I'm deeply passionate about{' '}
+          <span className="font-medium text-[#D99E3A]">Generative AI</span>, especially building{' '}
+          <span className="font-medium text-[#CCB700]">LLM-powered applications</span> that leverage advanced techniques like{' '}
+          <span className="font-medium text-[#D99E3A]">RAG</span> and <span className="font-medium text-[#CCB700]">Graph RAG</span>.
         </p>
         <div className="flex flex-wrap gap-4">
           {[

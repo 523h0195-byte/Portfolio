@@ -1,11 +1,11 @@
 [
   {
-    "title": "Chứng chỉ Chuyên sâu Trí tuệ Nhân tạo & Học máy",
-    "issuer": "Coursera / Google",
-    "date": "2025",
-    "desc": "Khóa học đào tạo toàn diện về xây dựng, huấn luyện và triển khai các mô hình Deep Learning và Large Language Models.",
-    "verifyUrl": "https://coursera.org",
-    "imageUrl": ""
+    "title": "Build & Deploy Your Web Dev Portfolio",
+    "issuer": "Scrimba / Coursera",
+    "date": "Jul 2026",
+    "desc": "An online course on building and deploying a web developer portfolio, authorized by Scrimba and offered through Coursera.",
+    "verifyUrl": "https://coursera.org/verify/PXHIE2FEFD3U",
+    "imageUrl": "/qualifications/c1.pdf"
   },
   {
     "title": "AWS Certified Solutions Architect – Associate",
@@ -13,6 +13,6 @@
     "date": "2024",
     "desc": "Chứng nhận năng lực thiết kế hệ thống phân tán, mở rộng nhanh chóng và tối ưu chi phí trên điện toán đám mây AWS.",
     "verifyUrl": "https://aws.amazon.com",
-    "imageUrl": ""
+    "imageUrl": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_512x512.3e2f4b0c6e5f8a1b7c9e3f8d5e5f8a1b.png"
   }
 ]

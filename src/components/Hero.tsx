@@ -3,9 +3,24 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import TypewriterText from './TypewriterText';
 
+const BASE_URL = import.meta.env.BASE_URL;
+const HERO_BG = `${BASE_URL}hero_image.png`;
+
 const Hero = () => (
   <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden px-4 pt-20 bg-cream-100">
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {/* Background Image với độ trong suốt 70% (opacity 30%) */}
+    <div
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-30 z-0"
+      style={{ backgroundImage: `url(${HERO_BG})` }}
+    />
+
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
+           style={{
+               backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(204, 183, 0, 0.15) 1px, transparent 0)',
+               backgroundSize: '25px 25px',
+           }}
+      ></div>
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold-300/10 rounded-full blur-[120px] animate-pulse"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-coffee-300/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
       <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-coffee-100/5 rounded-full blur-[100px]"></div>
@@ -17,7 +32,7 @@ const Hero = () => (
       transition={{ duration: 0.8, ease: 'easeOut' }}
       className="relative z-10 max-w-4xl"
     >
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-coffee-300/30 rounded-full bg-coffee-300/10 text-coffee-300 text-sm font-medium tracking-wide shadow-[0_0_15px_rgba(200,150,62,0.2)] hover:bg-coffee-300/20 hover:border-coffee-300/50 transition-all cursor-default">
+      <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-coffee-300/30 rounded-full bg-coffee-300/10 text-coffee-300 text-sm font-medium tracking-wide shadow-[0_0_15px_rgba(200,150,62,0.2)] hover:bg-coffee-300/20 hover:border-coffee-300/50 transition-all cursor-default backdrop-blur-sm">
         <span className="w-2 h-2 rounded-full bg-coffee-300 animate-pulse"></span>
         AVAILABLE FOR INTERNSHIPS
       </div>
@@ -76,7 +91,7 @@ const Hero = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 1 }}
-      className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-taupe-200 flex flex-col items-center gap-2"
+      className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-taupe-200 flex flex-col items-center gap-2 z-10"
     >
       <span className="text-xs uppercase tracking-widest">Scroll</span>
       <ChevronDown className="animate-bounce" size={24} />

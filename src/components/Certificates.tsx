@@ -1,22 +1,34 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ExternalLink, Award } from 'lucide-react';
+import { CheckCircle, ExternalLink, Award, FileText } from 'lucide-react';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
-import { CertificateModal } from './CertificateModal'; // Keep type import for CertificateModal
+import { CertificateModal } from './CertificateModal';
 import certificatesData from '../data/certificates.json';
 import type { Certificate } from '../types';
 
-const certificates = certificatesData as Certificate[];
+// Vite-specific: Prepend the base URL to root-relative asset paths
+// This ensures that assets from the `public` directory work correctly
+// both in development (with a base path) and in production.
+const BASE_URL = import.meta.env.BASE_URL;
+const CERT_BG = `${BASE_URL}hero_image1.png`;
+
+const certificates = certificatesData.map(cert => ({
+  ...cert,
+  imageUrl: cert.imageUrl.startsWith('/') && !cert.imageUrl.startsWith('//') ? `${BASE_URL}${cert.imageUrl.substring(1)}` : cert.imageUrl,
+})) as Certificate[];
 
 const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
   return (
-    <Section id="certificates">
+    <Section
+      id="certificates"
+      style={{ backgroundImage: `url(${CERT_BG})` }}
+    >
       <SectionTitle subtitle="Professional certifications and achievements">Certificates</SectionTitle>
-      <div className="grid md:grid-cols-2 gap-6">
-        {certificates.length > 0 ? ( // Ensure certificates is an array
+      <div className="grid md:grid-cols-2 gap-6 relative z-10">
+        {certificates.length > 0 ? (
           certificates.map((cert, idx) => (
             <motion.div
               key={idx}
@@ -24,39 +36,60 @@ const Certificates = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white/50 rounded-2xl border border-sand-100 hover:border-coffee-300/30 transition-all group overflow-hidden flex flex-col"
+              className="bg-white/60 backdrop-blur-sm rounded-2xl border border-sand-100 hover:border-coffee-300/40 hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col"
             >
               <div
                 onClick={() => setSelectedCert(cert)}
-                className="relative h-48 bg-cream-50 block overflow-hidden group-hover:opacity-90 transition-opacity cursor-pointer"
+                className="relative h-48 bg-cream-50 block overflow-hidden cursor-pointer"
               >
                 {cert.imageUrl ? (
-                  <img
-                    src={cert.imageUrl}
-                    alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  cert.imageUrl.endsWith('.pdf') ? (
+                    <div className="w-full h-full bg-gradient-to-br from-cream-100 via-sand-50 to-cream-200 flex flex-col items-center justify-center p-6 relative overflow-hidden border-b border-sand-100/60">
+                      <Award className="absolute -right-6 -bottom-6 w-36 h-36 text-coffee-300/10 transform -rotate-12 pointer-events-none" />
+                      <div className="relative z-10 flex flex-col items-center text-center">
+                        <div className="w-14 h-14 rounded-2xl bg-white/90 shadow-sm border border-sand-100 flex items-center justify-center text-coffee-300 mb-3 group-hover:scale-110 group-hover:bg-coffee-300 group-hover:text-white transition-all duration-300">
+                          <FileText size={28} />
+                        </div>
+                        <span className="text-xs font-semibold tracking-wider text-taupe-200 uppercase bg-white/80 px-2.5 py-0.5 rounded-full border border-sand-100 shadow-xs mb-1">
+                          {cert.issuer}
+                        </span>
+                        <span className="text-xs text-coffee-300/80 font-medium">PDF Certificate Document</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={cert.imageUrl}
+                      alt={cert.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  )
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center text-taupe-200 bg-cream-50">
-                    <Award size={48} className="opacity-20" />
+                  <div className="w-full h-full bg-gradient-to-br from-cream-100 to-sand-100 flex flex-col items-center justify-center p-6 relative overflow-hidden border-b border-sand-100/60">
+                    <Award className="absolute -right-6 -bottom-6 w-36 h-36 text-coffee-300/10 transform -rotate-12 pointer-events-none" />
+                    <div className="w-14 h-14 rounded-2xl bg-white/90 shadow-sm border border-sand-100 flex items-center justify-center text-coffee-300 mb-2">
+                      <Award size={28} />
+                    </div>
+                    <span className="text-xs font-semibold tracking-wider text-taupe-200 uppercase">{cert.issuer}</span>
                   </div>
                 )}
-                <span className="absolute bottom-3 right-3 bg-white/80 text-coffee-300 text-xs px-2 py-1 rounded flex items-center gap-1 backdrop-blur-sm border border-sand-100">
-                  <CheckCircle size={12} /> Verified
+
+                <span className="absolute top-3 right-3 bg-white/90 text-coffee-300 text-xs px-2.5 py-1 rounded-full flex items-center gap-1 backdrop-blur-md border border-sand-100 shadow-sm z-10 font-medium">
+                  <CheckCircle size={12} className="text-gold-300" /> Verified
                 </span>
-                <div className="absolute inset-0 bg-cream-50/0 group-hover:bg-cream-50/20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <span className="bg-white/80 text-espresso-100 text-sm px-4 py-2 rounded-full font-medium backdrop-blur-md border border-sand-100 shadow-lg flex items-center gap-2">
-                    <Award size={16} className="text-coffee-300" /> View Certificate
+
+                <div className="absolute inset-0 bg-espresso-100/20 backdrop-blur-[2px] transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20">
+                  <span className="bg-white text-espresso-100 text-sm px-5 py-2.5 rounded-full font-semibold border border-sand-100 shadow-xl flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <Award size={18} className="text-coffee-300" /> View Certificate
                   </span>
                 </div>
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-2">
+                <div className="flex justify-between items-start mb-2 gap-2">
                   <h3 className="text-xl font-bold text-espresso-100 group-hover:text-coffee-300 transition-colors font-display">
                     {cert.title}
                   </h3>
-                  <span className="text-xs font-mono text-taupe-200 border border-sand-100 px-2 py-1 rounded bg-cream-50">
+                  <span className="text-xs font-mono text-taupe-200 border border-sand-100 px-2 py-1 rounded bg-cream-50 shrink-0">
                     {cert.date}
                   </span>
                 </div>

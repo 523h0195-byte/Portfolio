@@ -15,31 +15,30 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-cream-100/90 backdrop-blur-lg border-b border-sand-100/50 py-3 shadow-sm'
-          : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-cream-100/90 backdrop-blur-lg border-b border-sand-100/50 py-4 md:py-5 shadow-sm'
+        : 'bg-transparent py-6 md:py-7'
+        }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center">
         <div
-          className="text-xl font-bold tracking-tighter flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+          className="text-2xl md:text-3xl font-bold tracking-tighter flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           role="button"
           tabIndex={0}
           onKeyDown={(e) => e.key === 'Enter' && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <Cpu className="text-coffee-600" />
+          <Cpu className="text-coffee-600 w-13 h-13 md:w-9 md:h-9" />
           <span className="text-espresso-100">
             DQUOCVINH<span className="text-coffee-300">.AI</span>
           </span>
         </div>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-taupe-200">
+        <div className="hidden md:flex gap-8 lg:gap-10 text-base font-semibold text-taupe-200">
           {['About', 'Skills', 'Projects', 'Certificates', 'Experience', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="hover:text-coffee-300 transition-colors relative group"
+              className="hover:text-coffee-300 transition-colors relative group py-1"
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coffee-300 transition-all group-hover:w-full"></span>
