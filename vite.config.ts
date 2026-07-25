@@ -11,5 +11,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
   },
-  base: '/523h0195-byte/'
+  base: '/Portfolio/'
 });
