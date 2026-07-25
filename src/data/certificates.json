@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Chứng chỉ Chuyên sâu Trí tuệ Nhân tạo & Học máy",
+    "issuer": "Coursera / Google",
+    "date": "2025",
+    "desc": "Khóa học đào tạo toàn diện về xây dựng, huấn luyện và triển khai các mô hình Deep Learning và Large Language Models.",
+    "verifyUrl": "https://coursera.org",
+    "imageUrl": ""
+  },
+  {
+    "title": "AWS Certified Solutions Architect – Associate",
+    "issuer": "Amazon Web Services",
+    "date": "2024",
+    "desc": "Chứng nhận năng lực thiết kế hệ thống phân tán, mở rộng nhanh chóng và tối ưu chi phí trên điện toán đám mây AWS.",
+    "verifyUrl": "https://aws.amazon.com",
+    "imageUrl": ""
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Core AI & ML",
+    "icon": "Brain",
+    "items": ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "Transformers", "LLMs"]
+  },
+  {
+    "category": "Languages",
+    "icon": "Code2",
+    "items": ["Python", "C++", "Java", "TypeScript", "SQL"]
+  },
+  {
+    "category": "Data Engineering",
+    "icon": "Database",
+    "items": ["Pandas", "NumPy", "Apache Spark", "MongoDB", "Vector DBs"]
+  },
+  {
+    "category": "DevOps & Tools",
+    "icon": "Terminal",
+    "items": ["Docker", "Git", "Linux", "AWS", "CI/CD"]
+  }
+]

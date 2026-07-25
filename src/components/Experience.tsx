@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
-import experience from '../data/experience.json';
+import experienceData from '../data/experience.json';
+import type { ExperienceItem } from '../types';
+
+const experience = experienceData as ExperienceItem[];
 
 const Experience = () => {
   return (
@@ -10,7 +13,7 @@ const Experience = () => {
       <SectionTitle subtitle="My academic and professional journey">Experience</SectionTitle>
       <div className="max-w-3xl mx-auto">
         <div className="relative border-l-2 border-sand-100 ml-3 md:ml-6 space-y-12 pb-4">
-          {experience.length > 0 ? ( // Ensure experience is an array
+          {experience.length > 0 ? (
             experience.map((item, idx) => (
               <motion.div
                 key={idx}

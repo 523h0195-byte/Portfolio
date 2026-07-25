@@ -4,8 +4,10 @@ import { CheckCircle, ExternalLink, Award } from 'lucide-react';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
 import { CertificateModal } from './CertificateModal'; // Keep type import for CertificateModal
-import certificates from '../data/certificates.json'; // Import directly
-import type { Certificate } from '../types/data';
+import certificatesData from '../data/certificates.json';
+import type { Certificate } from '../types';
+
+const certificates = certificatesData as Certificate[];
 
 const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);

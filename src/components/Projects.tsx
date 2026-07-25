@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
-import ProjectCard from './ProjectCard';
-import projects from '../data/projects.json';
+import ProjectCard from './ProjectCard'; // Import directly
+import projects from '../data/projects.json'; // Import directly
 
 const Projects = () => {
   return (

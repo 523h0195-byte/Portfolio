@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillCategory from './SkillCategory';
-import type { SkillGroup } from '../../types/data';
+import type { SkillGroup } from '../../types';
 
 interface SkillsGridProps {
   skills: SkillGroup[];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import * as LucideIcons from 'lucide-react'; // Import all Lucide icons
+import { HelpCircle, icons } from 'lucide-react';
 
 interface SkillCategoryProps {
   skillGroup: {
@@ -13,7 +13,7 @@ interface SkillCategoryProps {
 
 const SkillCategory = ({ skillGroup, delay }: SkillCategoryProps) => {
   // Dynamically get the Lucide icon component based on its string name
-  const IconComponent = LucideIcons[skillGroup.icon as keyof typeof LucideIcons];
+  const IconComponent = icons[skillGroup.icon as keyof typeof icons];
 
   return (
     <motion.div
@@ -25,8 +25,7 @@ const SkillCategory = ({ skillGroup, delay }: SkillCategoryProps) => {
     >
       <div className="flex items-center gap-3 mb-6">
         <div className="p-3 bg-cream-50 rounded-lg border border-sand-100 group-hover:border-coffee-300/30 transition-colors">
-          {IconComponent && <IconComponent size={24} className="text-coffee-300" />}
-          {!IconComponent && <LucideIcons.HelpCircle size={24} className="text-taupe-200" />} {/* Fallback icon */}
+          {IconComponent ? <IconComponent size={24} className="text-coffee-300" /> : <HelpCircle size={24} className="text-taupe-200" />}
         </div>
         <h3 className="text-lg font-bold text-espresso-100 font-display">{skillGroup.category}</h3>
       </div>
