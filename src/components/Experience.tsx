@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
-import type { ExperienceItem } from '../data/experience';
+import experience from '../data/experience.json';
 
 const Experience = () => {
-  const [experience, setExperience] = useState<ExperienceItem[]>([]);
-
-  useEffect(() => {
-    fetch('/experience.json')
-      .then((res) => res.ok ? res.json() : [])
-      .then(setExperience)
-      .catch(() => {});
-  }, []);
-
   return (
     <Section id="experience" style={{ backgroundImage: "url('/homepage1.png')" }}>
       <SectionTitle subtitle="My academic and professional journey">Experience</SectionTitle>
       <div className="max-w-3xl mx-auto">
         <div className="relative border-l-2 border-sand-100 ml-3 md:ml-6 space-y-12 pb-4">
-          {experience.length > 0 ? (
+          {experience.length > 0 ? ( // Ensure experience is an array
             experience.map((item, idx) => (
               <motion.div
                 key={idx}

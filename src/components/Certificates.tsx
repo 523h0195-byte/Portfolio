@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ExternalLink, Award } from 'lucide-react';
 import { Section } from './Section';
 import { SectionTitle } from './SectionTitle';
-import { CertificateModal } from './CertificateModal';
-import type { Certificate } from '../data/certificates';
+import { CertificateModal } from './CertificateModal'; // Keep type import for CertificateModal
+import certificates from '../data/certificates.json'; // Import directly
+import type { Certificate } from '../types/data';
 
 const Certificates = () => {
-  const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
-
-  useEffect(() => {
-    fetch('/certificates.json')
-      .then((res) => res.ok ? res.json() : [])
-      .then(setCertificates)
-      .catch(() => {});
-  }, []);
 
   return (
     <Section id="certificates">
       <SectionTitle subtitle="Professional certifications and achievements">Certificates</SectionTitle>
       <div className="grid md:grid-cols-2 gap-6">
-        {certificates.length > 0 ? (
+        {certificates.length > 0 ? ( // Ensure certificates is an array
           certificates.map((cert, idx) => (
             <motion.div
               key={idx}

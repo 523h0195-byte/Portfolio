@@ -18,7 +18,7 @@ const TypewriterText = ({
   useEffect(() => {
     let currentText = '';
     let currentIndex = 0;
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setInterval>;
 
     const startTyping = () => {
       timeout = setInterval(() => {
