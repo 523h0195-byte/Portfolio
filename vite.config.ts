@@ -11,5 +11,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
   },
-  base: '/Vinh9029/'
+  base: '/523h0195-byte/'
 });
