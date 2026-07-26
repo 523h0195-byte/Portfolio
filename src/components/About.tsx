@@ -12,19 +12,27 @@ const About = () => (
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="space-y-10 text-lg text-[#0A0A0A] leading-loose"
+        className="space-y-6 text-lg text-[#2C2C2C] leading-relaxed"
       >
         <p>
-          I am a senior Computer Science student at the{' '}
-          <span className="font-medium text-[#654321]">Ton Duc Thang University</span>,
-          specializing in <span className="font-medium text-[#654321]">Artificial Intelligence</span>.
+          I am a third-year Computer Science student at{' '}
+          <span className="font-semibold text-[#654321]">Ton Duc Thang University</span>,
+          specializing in <span className="font-semibold text-[#654321]">Artificial Intelligence</span>.
         </p>
         <p>
-          I'm deeply passionate about{' '}
-          <span className="font-medium text-[#D99E3A]">Generative AI</span>, especially building{' '}
-          <span className="font-medium text-[#CCB700]">LLM-powered applications</span> that leverage advanced techniques like{' '}
-          <span className="font-medium text-[#D99E3A]">RAG</span> and <span className="font-medium text-[#CCB700]">Graph RAG</span>.
+          I am deeply passionate about Artificial Intelligence—there is an incredible thrill in bringing an{' '}
+          <span className="font-semibold text-[#D99E3A]">AI model</span> from concept to a{' '}
+          <span className="font-semibold text-[#654321]">real-world, practical application</span>. While I am still early in my journey with limited experience, I stay driven by a constant eagerness to grow.
         </p>
+        <blockquote className="relative border-l-4 border-[#D99E3A] bg-gradient-to-r from-[#D99E3A]/15 via-[#D99E3A]/5 to-transparent px-6 py-5 rounded-r-2xl my-6 shadow-sm">
+          <p className="text-lg italic font-medium text-[#4A321A] leading-relaxed">
+            "Never stop learning, never stop exploring."
+          </p>
+          <footer className="mt-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#D99E3A] flex items-center gap-2">
+            <span className="w-6 h-[2px] bg-[#D99E3A] inline-block"></span>
+            Always learning, always adapting
+          </footer>
+        </blockquote>
         <div className="flex flex-wrap gap-4">
           {[
             { label: 'Major', value: 'Computer Science (AI)' },

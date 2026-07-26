@@ -7,12 +7,12 @@
   {
     "category": "Languages",
     "icon": "Code2",
-    "items": ["Python", "C++", "Java", "TypeScript", "SQL"]
+    "items": ["Python", "TypeScript", "SQL"]
   },
   {
-    "category": "Data Engineering",
+    "category": "AI Engineering",
     "icon": "Database",
-    "items": ["Pandas", "NumPy", "Apache Spark", "MongoDB", "Vector DBs"]
+    "items": ["Pandas", "NumPy", "Langchain", "LangGraph", "Vector DBs", "Neo4J"]
   },
   {
     "category": "DevOps & Tools",

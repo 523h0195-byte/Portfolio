@@ -1,12 +1,57 @@
 [
     {
+        "title": "A Machine Learning Approach to Psychological Disorder Screening and Virtual Assistant for Mental Health Support",
+        "desc": "Xây dựng mô hình học máy phân loại tầm soát và trợ lý (chatbot) ảo hổ trợ tư vấn Sức khoẻ Tâm thần",
+        "link": "https://github.com/Vinh9029/mental-health-project",
+        "tags": [
+            "React",
+            "Netlify",
+            "RAG",
+            "BERT",
+            "LLM GQueen3.1 3B",
+            "2026"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    },
+    {
+        "title": "Vietnamese Visual Question Answering",
+        "desc": "Xây dựng model Deep Learning cho VQA Tiếng Việt (Fine-tuning, Pre-trained và Train từ đầu). \nKiến trúc hướng A: CNN cho Image Decoder và 2 hướng Text Encoder: LSTM hoặc Transformer\n.Kiến trúc hướng B: BLIP Mutlimode Pretrained",
+        "link": "https://github.com/523h0195-byte/Final-DeepLearning",
+        "tags": [
+            "PyTorch",
+            "Deep Learning",
+            "Hugging Face",
+            "Transformer",
+            "2026"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    },
+    {
+        "title": "Heart Disease Prediction",
+        "desc": "Dự án Machine Learning về dự đoán bệnh tim, dựa trên model Random Forest và so sánh các model để tìm các patterns",
+        "link": "https://heartdisease10.streamlit.app/",
+        "tags": [
+            "Python",
+            "Machine Learning",
+            "Random Forest Algorithm",
+            "AI",
+            "2026"
+        ],
+        "color": "from-coffee-300 to-gold-400",
+        "image": ""
+    },
+    {
         "title": "DX Community",
-        "desc": "Một nền tảng cộng đồng dành cho các nhà phát triển và người đam mê công nghệ.",
+        "desc": "Một nền tảng cộng blog chia sẻ trải nghiệm, có tích hợp AI Chatbot trong mục nhắn tin hỏi đáp, dùng API Gemini.",
         "link": "https://dxcommunity.netlify.app",
         "tags": [
             "React",
             "Netlify",
-            "Community"
+            "DX Community",
+            "API Integration Chatbot",
+            "2026"
         ],
         "color": "from-coffee-300 to-gold-400",
         "image": ""
@@ -16,19 +61,24 @@
         "desc": "Một dự án AI Studio về giáo dục quốc phòng và an ninh.",
         "link": "https://gdpq-an-ninh-benunu.ai.studio",
         "tags": [
-            "AI",
-            "Studio",
-            "Education"
+            "Trắc nghiệm & Hỏi đáp AI",
+            "Ứng dụng học tập",
+            "Goolge AI Studio",
+            "Education",
+            "2026"
         ],
         "color": "from-coffee-300 to-gold-400",
         "image": ""
     },
     {
-        "title": "Dự án khác không có link",
-        "desc": "Mô tả cho dự án này. Vì không có thuộc tính 'link', nút sandbox sẽ không hiển thị.",
+        "title": "The Old Flavour Coffee Shop",
+        "desc": "Một trang web giới thiệu về quán cà phê The Old Flavour, với các sản phẩm, danh mục, giá cả, hình ảnh, thông tin liên hệ và các tính năng khác.",
+        "link": "http://dquocvinh.great-site.net/index.php",
         "tags": [
-            "Tag1",
-            "Tag2"
+            "Coffee Shop",
+            "E-commerce website",
+            "PHP Technology",
+            "2025"
         ],
         "color": "from-coffee-300 to-gold-400",
         "image": ""
