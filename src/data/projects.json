@@ -1,86 +1,86 @@
 [
     {
-        "title": "A Machine Learning Approach to Psychological Disorder Screening and Virtual Assistant for Mental Health Support",
-        "desc": "Xây dựng mô hình học máy phân loại tầm soát và trợ lý (chatbot) ảo hổ trợ tư vấn Sức khoẻ Tâm thần",
+        "title": "Mental Health Screening & AI Support Chatbot",
+        "desc": "Built an end-to-end mental health screening platform featuring a fine-tuned BERT model for psychological disorder classification and a RAG-powered chatbot using Qwen 3.1 3B for personalized mental health support. Integrated LLM-based conversational AI with a React frontend deployed on Netlify.",
         "link": "https://github.com/Vinh9029/mental-health-project",
         "tags": [
-            "React",
-            "Netlify",
-            "RAG",
             "BERT",
-            "LLM GQueen3.1 3B",
-            "2026"
+            "RAG",
+            "LLM (Qwen 3B)",
+            "React",
+            "LangChain",
+            "Netlify"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/mental-health.png"
     },
     {
         "title": "Vietnamese Visual Question Answering",
-        "desc": "Xây dựng model Deep Learning cho VQA Tiếng Việt (Fine-tuning, Pre-trained và Train từ đầu). \nKiến trúc hướng A: CNN cho Image Decoder và 2 hướng Text Encoder: LSTM hoặc Transformer\n.Kiến trúc hướng B: BLIP Mutlimode Pretrained",
+        "desc": "Developed and benchmarked multiple deep learning architectures for Vietnamese VQA: (A) CNN image encoder paired with LSTM and Transformer-based text encoders trained from scratch, (B) Fine-tuned BLIP multimodal pre-trained model. Compared performance across architectures to identify optimal approach for low-resource language VQA.",
         "link": "https://github.com/523h0195-byte/Final-DeepLearning",
         "tags": [
             "PyTorch",
-            "Deep Learning",
+            "Transformers",
+            "BLIP",
+            "CNN + LSTM",
             "Hugging Face",
-            "Transformer",
-            "2026"
+            "Deep Learning"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/vqa-answering.png"
     },
     {
         "title": "Heart Disease Prediction",
-        "desc": "Dự án Machine Learning về dự đoán bệnh tim, dựa trên model Random Forest và so sánh các model để tìm các patterns",
+        "desc": "Developed a clinical decision support tool for heart disease risk prediction. Trained and compared 5+ ML algorithms (Random Forest, SVM, Logistic Regression, etc.) with feature importance analysis. Deployed as an interactive Streamlit web application for real-time patient risk assessment.",
         "link": "https://heartdisease10.streamlit.app/",
         "tags": [
-            "Python",
-            "Machine Learning",
-            "Random Forest Algorithm",
-            "AI",
-            "2026"
+            "Scikit-learn",
+            "Random Forest",
+            "Streamlit",
+            "Data Analysis",
+            "Python"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/heart-prediction.png"
     },
     {
         "title": "DX Community",
-        "desc": "Một nền tảng cộng blog chia sẻ trải nghiệm, có tích hợp AI Chatbot trong mục nhắn tin hỏi đáp, dùng API Gemini.",
+        "desc": "Built a full-stack blog community platform for sharing experiences and knowledge. Integrated an AI-powered Q&A chatbot using the Gemini API for intelligent conversational assistance within the messaging feature.",
         "link": "https://dxcommunity.netlify.app",
         "tags": [
             "React",
-            "Netlify",
-            "DX Community",
-            "API Integration Chatbot",
-            "2026"
+            "Gemini API",
+            "AI Chatbot",
+            "Full-Stack",
+            "Netlify"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/dx-community.png"
     },
     {
-        "title": "GDPQ An Ninh",
-        "desc": "Một dự án AI Studio về giáo dục quốc phòng và an ninh.",
+        "title": "National Defense & Security Education App",
+        "desc": "Created an AI-powered educational platform for national defense and security studies. Features interactive quizzes and an AI Q&A system built with Google AI Studio for personalized learning assistance.",
         "link": "https://gdpq-an-ninh-benunu.ai.studio",
         "tags": [
-            "Trắc nghiệm & Hỏi đáp AI",
-            "Ứng dụng học tập",
-            "Goolge AI Studio",
-            "Education",
-            "2026"
+            "Google AI Studio",
+            "EdTech",
+            "AI Q&A",
+            "Interactive Quiz"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/national-defense.png"
     },
     {
         "title": "The Old Flavour Coffee Shop",
-        "desc": "Một trang web giới thiệu về quán cà phê The Old Flavour, với các sản phẩm, danh mục, giá cả, hình ảnh, thông tin liên hệ và các tính năng khác.",
+        "desc": "Designed and developed a full-featured e-commerce website for a local coffee shop, including product catalog, pricing management, image galleries, and contact system. Built with PHP for server-side rendering and dynamic content management.",
         "link": "http://dquocvinh.great-site.net/index.php",
         "tags": [
-            "Coffee Shop",
-            "E-commerce website",
-            "PHP Technology",
-            "2025"
+            "PHP",
+            "E-commerce",
+            "MySQL",
+            "Web Development"
         ],
         "color": "from-coffee-300 to-gold-400",
-        "image": ""
+        "image": "/projects/old-flavour.png"
     }
 ]

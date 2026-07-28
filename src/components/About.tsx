@@ -15,22 +15,26 @@ const About = () => (
         className="space-y-6 text-lg text-[#2C2C2C] leading-relaxed"
       >
         <p>
-          I am a third-year Computer Science student at{' '}
+          I'm an AI Engineering student at{' '}
           <span className="font-semibold text-[#654321]">Ton Duc Thang University</span>,
-          specializing in <span className="font-semibold text-[#654321]">Artificial Intelligence</span>.
+          building end-to-end{' '}
+          <span className="font-semibold text-[#654321]">machine learning solutions</span> — from
+          model training to production deployment.
         </p>
         <p>
-          I am deeply passionate about Artificial Intelligence—there is an incredible thrill in bringing an{' '}
-          <span className="font-semibold text-[#D99E3A]">AI model</span> from concept to a{' '}
-          <span className="font-semibold text-[#654321]">real-world, practical application</span>. While I am still early in my journey with limited experience, I stay driven by a constant eagerness to grow.
+          My work spans{' '}
+          <span className="font-semibold text-[#D99E3A]">NLP, Computer Vision, and Generative AI</span>,
+          with hands-on experience fine-tuning transformer models (BERT, BLIP), building{' '}
+          <span className="font-semibold text-[#654321]">RAG pipelines with LangChain</span>, and
+          deploying ML applications on cloud platforms. I'm driven by turning research into real-world impact.
         </p>
         <blockquote className="relative border-l-4 border-[#D99E3A] bg-gradient-to-r from-[#D99E3A]/15 via-[#D99E3A]/5 to-transparent px-6 py-5 rounded-r-2xl my-6 shadow-sm">
           <p className="text-lg italic font-medium text-[#4A321A] leading-relaxed">
-            "Never stop learning, never stop exploring."
+            "I don't just build models — I build solutions that people can actually use."
           </p>
           <footer className="mt-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#D99E3A] flex items-center gap-2">
             <span className="w-6 h-[2px] bg-[#D99E3A] inline-block"></span>
-            Always learning, always adapting
+            From research to production
           </footer>
         </blockquote>
         <div className="flex flex-wrap gap-4">
@@ -38,6 +42,7 @@ const About = () => (
             { label: 'Major', value: 'Computer Science (AI)' },
             { label: 'Focus', value: 'Deep Learning & MLOps' },
             { label: 'Location', value: 'Ho Chi Minh City' },
+            { label: 'Status', value: 'Open for Internships' },
           ].map((item) => (
             <div key={item.label} className="px-5 py-3 bg-white rounded-xl border border-gray-200 shadow-sm">
               <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">
@@ -65,7 +70,7 @@ const About = () => (
                   <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
                 </svg>
               </div>
-              <p className="text-sand-200 text-sm">Profile Image Placeholder</p>
+              <p className="text-sand-200 text-sm">Your Photo Here</p>
             </div>
           </div>
         </div>

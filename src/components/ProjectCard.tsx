@@ -13,8 +13,14 @@ interface ProjectCardProps {
   };
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const [previewMode, setPreviewMode] = useState(false);
+
+  const imageUrl = project.image?.startsWith('/') && !project.image.startsWith('//')
+    ? `${BASE_URL}${project.image.substring(1)}`
+    : project.image;
 
   useEffect(() => {
     if (previewMode) {
@@ -35,8 +41,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         viewport={{ once: true }}
         className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-sand-100 bg-white transition-all hover:-translate-y-1 hover:border-sand-200"
       >
-        <div className={`absolute top-0 left-0 h-1 w-full bg-gradient-to-r ${project.color}`}></div>
-        <div className="p-8 flex flex-col h-full">
+        <div className={`absolute top-0 left-0 h-1 w-full z-10 bg-gradient-to-r ${project.color}`}></div>
+
+        {imageUrl && (
+          <div className="relative h-200 sm:h-100 md:h-70 w-full overflow-hidden bg-cream-50 border-b border-sand-100 shrink-0">
+            <img
+              src={imageUrl}
+              alt={project.title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-espresso-100/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+          </div>
+        )}
+
+        <div className="p-6 md:p-8 flex flex-col h-full flex-1">
           <div className="flex justify-between items-start mb-4">
             <h3 className="font-display text-2xl font-bold text-espresso-100 transition-colors group-hover:text-coffee-300">
               {project.title}

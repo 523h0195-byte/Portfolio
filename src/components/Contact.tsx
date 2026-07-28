@@ -24,7 +24,7 @@ const Contact = () => {
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 relative z-10">
           <a
-            href="mailto:bearastrikingresemblance@gmail.com"
+            href="mailto:duongquocvinh9029@gmail.com"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-coffee-300 hover:bg-gold-300 text-white rounded-full font-bold tracking-wide transition-all shadow-lg shadow-coffee-300/25 hover:shadow-gold-300/50 hover:-translate-y-1 w-full sm:w-auto group"
           >
             <Mail size={20} className="group-hover:rotate-12 transition-transform" />
@@ -40,7 +40,7 @@ const Contact = () => {
               <Github size={24} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/d%C6%B0%C6%A1ng-qu%E1%BB%91c-vinh-619b51412/"
               target="_blank"
               rel="noreferrer"
               className="p-4 bg-white/80 backdrop-blur-md rounded-full hover:bg-sand-50 hover:text-coffee-300 transition-all text-taupe-200 border border-sand-100 hover:border-coffee-300/50 hover:-translate-y-1 shadow-lg hover:shadow-coffee-300/20 group"
